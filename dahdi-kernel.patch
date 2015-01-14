@@ -1,0 +1,22 @@
+diff -rupN new/linux/drivers/dahdi/dahdi-base.c dahdi-linux-complete-2.9.1.1+2.9.1/linux/drivers/dahdi/dahdi-base.c
+--- new/linux/drivers/dahdi/dahdi-base.c	2014-09-07 10:42:03.732081645 +0100
++++ dahdi-linux-complete-2.9.1.1+2.9.1/linux/drivers/dahdi/dahdi-base.c	2014-08-27 04:05:48.011837643 +0100
+@@ -51,6 +51,7 @@
+ #include <linux/delay.h>
+ #include <linux/mutex.h>
+ #include <linux/ktime.h>
++#include <linux/slab.h>
+ 
+ #if defined(HAVE_UNLOCKED_IOCTL) && defined(CONFIG_BKL)
+ #include <linux/smp_lock.h>
+diff -rupN new/linux/drivers/dahdi/xpp/xpd.h dahdi-linux-complete-2.9.1.1+2.9.1/linux/drivers/dahdi/xpp/xpd.h
+--- new/linux/drivers/dahdi/xpp/xpd.h	2014-09-07 10:42:48.440931497 +0100
++++ dahdi-linux-complete-2.9.1.1+2.9.1/linux/drivers/dahdi/xpp/xpd.h	2014-08-27 04:15:22.929264700 +0100
+@@ -39,6 +39,7 @@
+ #include <linux/moduleparam.h>
+ #endif /* __KERNEL__ */
+ 
++#include <linux/slab.h>
+ #include <dahdi/kernel.h>
+ 
+ #ifdef __KERNEL__
